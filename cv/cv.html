@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Yu Hang — Curriculum Vitae</title>
+<style>
+  @page { size: A4; margin: 15mm 16mm 14mm 16mm; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #ffffff; }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", sans-serif;
+    font-size: 9.6pt;
+    line-height: 1.45;
+    color: #1f2328;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  a { color: #1f2328; text-decoration: none; }
+  header { border-bottom: 1.6pt solid #1f2328; padding-bottom: 6pt; margin-bottom: 10pt; }
+  h1 { font-size: 21pt; letter-spacing: 0.6pt; margin: 0 0 2pt; font-weight: 700; }
+  .tagline { font-size: 9.6pt; color: #444; margin: 0 0 5pt; }
+  .contact { font-size: 8.6pt; color: #333; }
+  .contact span { white-space: nowrap; }
+  .contact .sep { color: #bbb; margin: 0 5pt; }
+
+  h2 {
+    font-size: 9.2pt;
+    text-transform: uppercase;
+    letter-spacing: 1.1pt;
+    margin: 12pt 0 5pt;
+    padding-bottom: 2pt;
+    border-bottom: 0.6pt solid #cfd4da;
+    color: #111;
+  }
+  h2:first-of-type { margin-top: 2pt; }
+  /* 标题不要单独留在页尾 */
+  h2 { break-after: avoid; page-break-after: avoid; }
+
+  .entry { margin-bottom: 5pt; page-break-inside: avoid; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 8pt; }
+  .row .left { font-weight: 700; }
+  .row .right { color: #555; font-size: 8.8pt; white-space: nowrap; }
+  .sub { color: #333; font-style: italic; }
+  .meta { color: #555; font-size: 8.8pt; margin-top: 1pt; }
+  ul { margin: 3pt 0 0; padding-left: 13pt; }
+  li { margin-bottom: 1.6pt; }
+
+  ol.pubs { margin: 0; padding-left: 15pt; }
+  ol.pubs li { margin-bottom: 3.4pt; page-break-inside: avoid; }
+  .venue { font-style: italic; }
+  .doi { color: #4a5a6a; font-size: 8.4pt; word-break: break-all; }
+  .note { color: #555; font-style: italic; }
+
+  .skills { display: grid; grid-template-columns: 74pt 1fr; row-gap: 2pt; }
+  .skills .k { font-weight: 700; color: #333; }
+  footer { margin-top: 9pt; padding-top: 4pt; border-top: 0.6pt solid #cfd4da; color: #777; font-size: 8pt; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Yu Hang</h1>
+  <p class="tagline">Ph.D. in Computer Science &middot; Brain&ndash;Computer Interfaces &middot; Neuromorphic Computing</p>
+  <p class="contact">
+    <span>yuh@zju.edu.cn</span><span class="sep">|</span>
+    <span>yuhang.live</span><span class="sep">|</span>
+    <span>github.com/YuleYu</span><span class="sep">|</span>
+    <span>scholar.google.com/citations?user=vlFCOKsAAAAJ</span>
+  </p>
+</header>
+
+<h2>Research Interests</h2>
+<p style="margin:0">
+  Neural computing and spiking neural networks; neuromorphic computing and online spike sorting;
+  brain&ndash;computer interfaces (SSVEP-based systems); spatiotemporal neural signal processing.
+</p>
+
+<h2>Education</h2>
+<div class="entry">
+  <div class="row">
+    <div><span class="left">Zhejiang University</span>, Hangzhou, China</div>
+    <div class="right">Sep. 2018 &ndash; Mar. 2026</div>
+  </div>
+  <div class="sub">Ph.D. in Computer Science and Technology</div>
+  <div class="meta">Advisors: Prof. Gang Pan and Researcher Yu Qi &middot; Pervasive &amp; Cyborg Intelligence Lab</div>
+</div>
+<div class="entry">
+  <div class="row">
+    <div><span class="left">Zhejiang University of Technology</span>, Hangzhou, China</div>
+    <div class="right">Sep. 2014 &ndash; Jun. 2018</div>
+  </div>
+  <div class="sub">Bachelor of Computer Science and Technology</div>
+</div>
+
+<h2>Publications</h2>
+<ol class="pubs">
+  <li>
+    <strong>Yu, H.</strong>, Yu, J., Qi, Y., &amp; Pan, G. (2025). Resource-efficient fully automatic spike sorter
+    via scale-adaptive neuromorphic model. <span class="venue">Neurocomputing</span>, 132157.
+    <span class="note">A scale-elastic spike sorting algorithm.</span>
+    <div class="doi">doi.org/10.1016/j.neucom.2025.132157</div>
+  </li>
+  <li>
+    <strong>Yu, H.</strong>, Qi, Y., &amp; Pan, G. (2023). NeuSort: An automatic adaptive spike sorting approach
+    with neuromorphic models. <span class="venue">Journal of Neural Engineering</span>, 20(5), 056006.
+    <span class="note">An unsupervised SNN spike sorting automation algorithm.</span>
+    <div class="doi">doi.org/10.1088/1741-2552/acf61d</div>
+  </li>
+  <li>
+    Wang, H., Qi, Y., <strong>Yu, H.</strong>, Wang, Y., Liu, C., Hu, G., &amp; Pan, G. (2022). RCIT: An RSVP-based
+    concealed information test framework using EEG signals. <span class="venue">IEEE Transactions on Cognitive and
+    Developmental Systems</span>, 14(2), 541&ndash;551. <span class="note">EEG lie detection.</span>
+    <div class="doi">doi.org/10.1109/TCDS.2021.3053455</div>
+  </li>
+  <li>
+    <strong>Yu, H.</strong>, Qi, Y., Wang, H., &amp; Pan, G. (2021). Secure typing via BCI system with encrypted
+    feedback. <span class="venue">43rd Annual International Conference of the IEEE EMBS (EMBC)</span>, 4969&ndash;4973.
+    <span class="note">SSVEP-BCI encrypted interaction system.</span>
+    <div class="doi">doi.org/10.1109/EMBC46164.2021.9630645</div>
+  </li>
+  <li>
+    Pan, G., Li, J.-J., Qi, Y., <strong>Yu, H.</strong>, Zhu, J.-M., Zheng, X.-X., Wang, Y.-M., &amp; Zhang, S.-M. (2018).
+    Rapid decoding of hand gestures in electrocorticography using recurrent neural networks.
+    <span class="venue">Frontiers in Neuroscience</span>, 12. <span class="note">LSTM decoding of ECoG gesture signals.</span>
+    <div class="doi">doi.org/10.3389/fnins.2018.00555</div>
+  </li>
+  <li>
+    Xu, Q., Qi, Y., <strong>Yu, H.</strong>, Shen, J., Tang, H., &amp; Pan, G. (2018). CSNN: An augmented spiking based
+    framework with perceptron-inception. <span class="venue">Proceedings of the 27th International Joint Conference on
+    Artificial Intelligence (IJCAI)</span>, 1646&ndash;1652. <span class="note">A CNN-SNN hybrid network.</span>
+    <div class="doi">doi.org/10.24963/ijcai.2018/228</div>
+  </li>
+  <li>
+    Qi, Y., Shen, J., Wang, Y., Tang, H., <strong>Yu, H.</strong>, Wu, Z., &amp; Pan, G. (2018). Jointly learning network
+    connections and link weights in spiking neural networks. <span class="venue">IJCAI</span>.
+    <span class="note">SNN sparse pruning strategy.</span>
+    <div class="doi">doi.org/10.24963/ijcai.2018/221</div>
+  </li>
+</ol>
+
+<h2>Patent</h2>
+<div class="entry">
+  <div class="row">
+    <div>An online neuron classification method based on neuromorphic computing</div>
+    <div class="right">ZL202210849758.7</div>
+  </div>
+</div>
+
+<h2>Research Projects</h2>
+<div class="entry">
+  <div class="row">
+    <div><span class="left">Brain-like Computing Project</span> &mdash; Zhejiang University &amp; ChiNext Lab</div>
+    <div class="right">Apr. 2020 &ndash; Oct. 2020</div>
+  </div>
+  <ul>
+    <li>Built a brain&ndash;computer interface typing system based on steady-state visual evoked potentials (SSVEP).</li>
+    <li>Designed the visual stimulation panel, implemented the core recognition algorithms, and integrated the closed-loop system.</li>
+    <li>Demonstrated &ldquo;mind-typing&rdquo;, enabling text input from neural signals.</li>
+  </ul>
+</div>
+<div class="entry">
+  <div class="row">
+    <div><span class="left">Non-invasive BCI Applications</span> &mdash; Zhejiang University &amp; iFLYTEK</div>
+    <div class="right">Jul. 2019 &ndash; Aug. 2019</div>
+  </div>
+  <ul>
+    <li>Studied deception detection with non-invasive brain&ndash;computer interfaces.</li>
+    <li>Designed the closed-loop paradigms and the data acquisition system; collected over 50 hours of EEG data.</li>
+  </ul>
+</div>
+<div class="entry">
+  <div class="row">
+    <div><span class="left">Internship</span> &mdash; Nokia Shanghai Bell Lab</div>
+    <div class="right">Jul. 2017</div>
+  </div>
+  <ul>
+    <li>Researched enterprise instant messaging: user behaviour, requirement collection, and design reference
+      for an H5-based IM application.</li>
+  </ul>
+</div>
+
+<footer>
+  <span>Yu Hang &middot; Curriculum Vitae</span>
+  <span>yuhang.live</span>
+</footer>
+
+</body>
+</html>
