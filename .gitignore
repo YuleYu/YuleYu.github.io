@@ -4,6 +4,10 @@ public/
 db.json
 .deploy_git/
 
+# 简历产物：只在本地，绝不随站点发布
+build-cv/
+source/attaches/CV.pdf
+
 # 系统杂项
 .DS_Store
 *.log

@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
-# 从 cv/cv.html 生成 site 上的 CV.pdf（source/attaches/CV.pdf）
+# 从 cv/cv.html 生成 CV.pdf 到 build-cv/（本地目录，已 gitignore，不随站点发布）
 # 用法：bash bin/build-cv.sh
+# 要让简历上线：手动把 build-cv/CV.pdf 复制到 source/attaches/ 并开启
+# themes/academia/_config.yml 里的 cv_dl.enable —— 两步都需本人确认后再做。
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 SRC="$ROOT/cv/cv.html"
-OUT="$ROOT/source/attaches/CV.pdf"
+OUT="$ROOT/build-cv/CV.pdf"
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 [ -x "$CHROME" ] || { echo "未找到 Google Chrome，无法生成 PDF"; exit 1; }

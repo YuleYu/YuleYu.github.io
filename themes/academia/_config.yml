@@ -46,8 +46,11 @@ e_social_links:
   # ORCID: / || fab fa-orcid
 
 # CV download link
+# 默认关闭：简历不在站点上公开下载。
+# 恢复步骤：把 PDF 放到 source/attaches/CV.pdf，再把 enable 改成 true，
+# 推送前必须先跟本人确认（简历是否公开、给哪一版）。
 cv_dl:
-  enable: true
+  enable: false
   dir: /attaches/CV.pdf
   description: Curriculum Vitae (PDF)
 
