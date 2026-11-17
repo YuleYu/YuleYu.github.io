@@ -6,6 +6,7 @@ db.json
 
 # 简历产物：只在本地，绝不随站点发布
 build-cv/
+cv/
 source/attaches/CV.pdf
 
 # 系统杂项

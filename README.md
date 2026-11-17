@@ -5,14 +5,15 @@ Hexo + Academia 主题，构建产物由 GitHub Actions 自动发布到 GitHub P
 ## 站点结构
 
 ```
-cv/cv.html                 CV 的打印版排版（A4，Chrome 生成 PDF）
-bin/build-cv.sh            从 cv.html 生成 build-cv/CV.pdf（本地，不入库）
 source/_posts/index.md     主页全部内容（单页 CV，改这一个文件即可）
 themes/academia/           主题，_config.yml 管侧栏签名、菜单、下载入口
 .github/workflows/deploy.yml  推送到 src 分支即自动构建并发布
 ```
 
 站点上**不提供简历下载**（`cv_dl.enable: false`，`source/attaches/` 不存在的状态）。
+
+简历的排版源码（`cv/cv.html`）和生成脚本（`bin/build-cv.sh`）**不在本仓库**，
+已移到本机 `~/WorkBuddy/求职/简历与材料/`，避免 PDF 与简历正文随公开仓库外泄。
 
 ## 改内容
 
@@ -29,10 +30,17 @@ git add -A && git commit -m "update: 说明改了什么" && git push
 
 ## 改 CV（PDF）
 
-改 `cv/cv.html` 后运行：
+简历工具链不在本仓库，在 `~/WorkBuddy/求职/简历与材料/`：
+
+```
+cv/cv.html           A4 打印版排版
+bin/build-cv.sh      从 cv.html 生成 build-cv/CV.pdf
+```
+
+改完 `cv.html` 后在该目录运行：
 
 ```bash
-bash bin/build-cv.sh      # 输出 build-cv/CV.pdf，只在本地
+bash bin/build-cv.sh      # 输出 build-cv/CV.pdf，留在本机
 ```
 
 PDF 依赖本机 Google Chrome 的 headless 打印，脚本已带 `--no-sandbox` 与独立 profile，
@@ -40,7 +48,7 @@ PDF 依赖本机 Google Chrome 的 headless 打印，脚本已带 `--no-sandbox`
 
 **简历默认不上线。** 要公开下载入口得手动做两步，且两步都要本人确认后再做：
 
-1. `cp build-cv/CV.pdf source/attaches/CV.pdf`
+1. `cp ~/WorkBuddy/求职/简历与材料/build-cv/CV.pdf source/attaches/CV.pdf`
 2. `themes/academia/_config.yml` 里 `cv_dl.enable: true`
 
 `source/attaches/CV.pdf` 与 `build-cv/` 都写在 `.gitignore` 里，不会误提交。
